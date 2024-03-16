@@ -15,7 +15,7 @@ termianl and use this script in the following way:
 
 - Install through catkin
 - ``$ cd ~/catkin_ws/src/``
-- ``$ git clone https://github.com/ROBOTIS-GIT/turtlebot3_ms```gs.git``
+- ``$ git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git``
 - ``$ git clone https://github.com/ROBOTIS-GIT/turtlebot3.git``
 - ``$ git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git``
 - ``$ sudo apt install ros-noetic-turtlebot3-bringup``
@@ -34,3 +34,6 @@ You can add additional objects and shapes into your simulated environment.
 - elect the turtlebot3 model to be burger and use the ’roslaunch’ command to spawn a gazebo
 world with a turtlebot3 in it ``$ export TURTLEBOT3_MODEL=burger`` & ``$ roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch``
 - Open a new terminal and try to visualize the robot and its sensors in RViz ``$ rviz rviz``
+- Click on the add button, select RobotModel and add it to the RViz panel.
+- Visualize the transforms tree: ``$ rosrun rqt_tf_tree rqt_tf_tree``
+- Bing up a full robot model with all its transformations ``$ roslaunch turtlebot3_bringup turtlebot3_remote.launch``
