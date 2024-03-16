@@ -27,3 +27,10 @@ termianl and use this script in the following way:
 
 ## Creating object models in Gazebo
 You can add additional objects and shapes into your simulated environment.
+
+![Figure](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/1_Sensors_in_ROS/assets/Figure_4.png)
+
+## Setting up the working environment
+- elect the turtlebot3 model to be burger and use the ’roslaunch’ command to spawn a gazebo
+world with a turtlebot3 in it ``$ export TURTLEBOT3_MODEL=burger`` & ``$ roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch``
+- Open a new terminal and try to visualize the robot and its sensors in RViz ``$ rviz rviz``
