@@ -46,8 +46,31 @@ world with a turtlebot3 in it ``$ export TURTLEBOT3_MODEL=burger`` & ``$ roslaun
 
 Explore the different examples available from the [turtlebot3 metapackage]({https://emanual.robotis.com/docs/en/platform/turtlebot3/basic\_examples/#basic-examples)
 
-Move using Interactive Markers
+### Move using Interactive Markers
 - ``$ roslaunch turtlebot3_example interactive_markers.launch``
 - ``$ rosrun rviz rviz -d `rospack find turtlebot3_example`/rviz/turtlebot3_interactive.rviz``
 
 ![Turtlebot3](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/1_Sensors_in_ROS/assets/Figure_5.png)
+
+![rqt_graph](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/1_Sensors_in_ROS/assets/Figure_7.png)
+
+### Point Operation
+In this example the user specifies an input corresponding to x | y | z. The first two numbers are distance numbers and the third is an angle value ( -180 to 180), referenced to the world origin in Gazebo the robot spawned in the origin (0 | 0 |0). The symbol | represents a space bar character, a correct command for the robot would be “1 1 90”.
+
+- ``$ roslaunch turtlebot3_example turtlebot3_pointop_key.launch``
+
+## Sensors
+In this section, we will take a closer look at the information coming from odometry and the LiDAR sensor. We will use the patrol example and create a node which subscribes to the /odom topic to plot the position of the robot throughout the patrol behavior. Additionally, we will create a new node that subscribes to the /scan topic, and moves the robot towards an object that is close by.
+
+### Creating nodes to visualize sensor data from the odometry topic
+- Create a node to subscribe to the odometry topic to create an x-y plot of the robot’s reported position.
+- Use ``plot_odom.py``
+- Install the necessary packages ``$ sudo apt install python-numpy python-matplotlib``
+
+#### Run the patrol example to complete one cycle of 1m square.
+![Square](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/1_Sensors_in_ROS/assets/Figure_1.png)
+
+#### Select one of the shapes for patrol, and run it with a number of cycles greater than 1 (e.g. t 1 3).
+![Triangle](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/1_Sensors_in_ROS/assets/Figure_2.png)
+
+![Circle](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/1_Sensors_in_ROS/assets/Figure_3.png)
