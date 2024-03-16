@@ -37,3 +37,17 @@ world with a turtlebot3 in it ``$ export TURTLEBOT3_MODEL=burger`` & ``$ roslaun
 - Click on the add button, select RobotModel and add it to the RViz panel.
 - Visualize the transforms tree: ``$ rosrun rqt_tf_tree rqt_tf_tree``
 - Bing up a full robot model with all its transformations ``$ roslaunch turtlebot3_bringup turtlebot3_remote.launch``
+
+
+
+## Running turtlebot3 examples
+- ``$ roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch``
+- ``$ roslaunch turtlebot3_bringup turtlebot3_remote.launch``
+
+Explore the different examples available from the [turtlebot3 metapackage]({https://emanual.robotis.com/docs/en/platform/turtlebot3/basic\_examples/#basic-examples)
+
+Move using Interactive Markers
+- ``$ roslaunch turtlebot3_example interactive_markers.launch``
+- ``$ rosrun rviz rviz -d `rospack find turtlebot3_example`/rviz/turtlebot3_interactive.rviz``
+
+![Turtlebot3](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/1_Sensors_in_ROS/assets/Figure_5.png)
