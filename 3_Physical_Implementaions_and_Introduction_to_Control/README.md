@@ -109,6 +109,11 @@ Explore different paradigms to control the movements of a robotic platform
     ```
 
 ## Executing robot motions in closed-loop control
+
 [![close_loop_odom.py](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/3_Physical_Implementaions_and_Introduction_to_Control/assets/Figure_4.png)](https://drive.google.com/file/d/1BLsGuUQjAVZ0VQYrjQjnLBMr8a240UXC/view?usp=sharing)
 
+<p align="center">close_loop_odom.py</p>
+
 [![close_loop_laser.py](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/3_Physical_Implementaions_and_Introduction_to_Control/assets/Figure_5.png)](https://drive.google.com/file/d/1nCw97bPlgRkBqKBgahunCjbnzLAQxz7U/view?usp=sharing)
+
+<p align="center">close_loop_laser.py</p>
