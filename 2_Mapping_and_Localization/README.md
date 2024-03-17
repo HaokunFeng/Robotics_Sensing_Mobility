@@ -33,3 +33,17 @@ Setup RViz visualization tool
 
 - Teleoperate the robot around the room. When you have finished tracing the surroundings to complete the map, you can save it by running the following command in the terminal after finishing the gmapping launch: ``$ rosrun map_server map_saver -f ~/map``
 
+![map](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/2_Mapping_and_Localization/map/map.png)
+
+## Navigating the map. 2D PoseEstimate and 2DNavGoal
+- Install Dependencies: ``sudo apt-get install ros-noetic-dwa-local-planner``
+- Work with the turtlebot3\_world and the teleoperation program (make sure to close the RViz window it will be relaunched), we will launch a navigation file: ``$ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml``
+- Start moving the Robot around the room using the keyboard teleop.
+
+![Sensor Measurement](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/2_Mapping_and_Localization/assets/Figure_3.png)
+
+- Re-initialize robot location on the map.
+![Re-initialize](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/2_Mapping_and_Localization/assets/Figure_5.png)
+
+- Add an obstacle (insert the pillar you previously created) You now have both static obstacles and a dynamic (new) obstacle that isn’t part of your map. 
+![Nodes & Topics](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/2_Mapping_and_Localization/assets/Figure_6.png)
