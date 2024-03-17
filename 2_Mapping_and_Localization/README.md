@@ -46,6 +46,16 @@ Setup RViz visualization tool
 
 ![Re-initialize](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/2_Mapping_and_Localization/assets/Figure_5.png)
 
+- Another feature in the RViz GUI, is the option to send Navigation goals to the robot. At this point, the teleoperation program needs to be terminated. You can command the robot by pressing the button 2DNavGoal and clicking on the map where an arrow will appear and release the mouse to provide the orientation. You can observe the planned trajectory and the robot moving towards this new location.
+
+- Another way to provide navigation goals is by publishing directly into the goal topic: ``$ rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped '{header: {stamp: now, frame_id: "map"}, pose: {position: {x: <value>, y: <value>, z: <value>}, orientation: {w: <value>}}}'``
+
 - Add an obstacle (insert the pillar you previously created) You now have both static obstacles and a dynamic (new) obstacle that isn’t part of your map. 
 
 ![Nodes & Topics](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/2_Mapping_and_Localization/assets/Figure_6.png)
+
+- Navigate robot to a new location using 2DNav Goal without the pillar.
+[![Navigation](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/2_Mapping_and_Localization/assets/Figure_7.png)](https://drive.google.com/file/d/1bKYwpVqsLr12XZPvQHSxt5w8SbOVYWXH/view?usp=sharing)
+
+- Navigate robot to a new location using 2DNav Goal that avoids the inserted pillar.
+[![Navigation](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/2_Mapping_and_Localization/assets/Figure_8.png)](https://drive.google.com/file/d/13RZZ2YRex00Ja_xRPLdAo2WX7N88LAna/view?usp=sharing)
