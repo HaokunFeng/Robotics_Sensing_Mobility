@@ -33,7 +33,7 @@ Setup RViz visualization tool
 
 - Teleoperate the robot around the room. When you have finished tracing the surroundings to complete the map, you can save it by running the following command in the terminal after finishing the gmapping launch: ``$ rosrun map_server map_saver -f ~/map``
 
-![map](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/2_Mapping_and_Localization/map/map.png)
+<div align=center><img src="https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/2_Mapping_and_Localization/map/map.png"/></div>
 
 ## Navigating the map. 2D PoseEstimate and 2DNavGoal
 - Install Dependencies: ``sudo apt-get install ros-noetic-dwa-local-planner``
