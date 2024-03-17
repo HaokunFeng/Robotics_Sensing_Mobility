@@ -43,7 +43,9 @@ Setup RViz visualization tool
 ![Sensor Measurement](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/2_Mapping_and_Localization/assets/Figure_3.png)
 
 - Re-initialize robot location on the map.
+
 ![Re-initialize](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/2_Mapping_and_Localization/assets/Figure_5.png)
 
 - Add an obstacle (insert the pillar you previously created) You now have both static obstacles and a dynamic (new) obstacle that isn’t part of your map. 
+
 ![Nodes & Topics](https://github.com/HaokunFeng/Robotics_Sensing_Mobility/blob/main/2_Mapping_and_Localization/assets/Figure_6.png)
