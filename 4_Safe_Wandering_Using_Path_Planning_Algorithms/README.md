@@ -73,6 +73,19 @@ In previous project, turtlebot3\_navigation.launch is launched before we used th
     ![Obstacle](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/4_Safe_Wandering_Using_Path_Planning_Algorithms/assets/Figure_1.png)
     <p align="center">Obstacle</p>
 
-    ![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/4_Safe_Wandering_Using_Path_Planning_Algorithms/assets/Figure_2.png)
+    ![Initial Position](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/4_Safe_Wandering_Using_Path_Planning_Algorithms/assets/Figure_2.png)
+    <p align="center">Initial Position</p>
+
+    ![Orientation](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/4_Safe_Wandering_Using_Path_Planning_Algorithms/assets/Figure_3.png)
+    <p align="center">Orientation</p>
+
+    ![Orientation](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/4_Safe_Wandering_Using_Path_Planning_Algorithms/assets/Figure_4.png)
+    <p align="center">Orientation</p>
+
+    ![Goal Position](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/4_Safe_Wandering_Using_Path_Planning_Algorithms/assets/Figure_5.png)
+    <p align="center">Goal Position</p>
 
 
+## Path planning with the physical robot
+
+Repeat the same process for testing the two global planners, now using the map. If you do not have the .pgm and .yaml files associated with the map you will have to run the gmapping demo and teleoperate the robot around the map before getting started.
