@@ -70,4 +70,9 @@ In previous project, turtlebot3\_navigation.launch is launched before we used th
     - Some parameters can be changed dynamically using the command: ``$ rosrun rqt_reconfigure rqt_reconfigure``
 
 - Use the pillar model, and add it as an obstacle in the turtlebot3\_world. Turn on the Local Map visualization in Rviz. Attempt to send a 2DNavigationGoal where the robot has to circumvent the new obstacle.
-    ![]
+    ![Obstacle](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/4_Safe_Wandering_Using_Path_Planning_Algorithms/assets/Figure_1.png)
+    <p align="center">Obstacle</p>
+
+    ![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/4_Safe_Wandering_Using_Path_Planning_Algorithms/assets/Figure_2.png)
+
+
