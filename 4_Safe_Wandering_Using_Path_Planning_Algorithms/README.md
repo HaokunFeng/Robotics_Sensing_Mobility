@@ -36,4 +36,25 @@ In previous project, turtlebot3\_navigation.launch is launched before we used th
     >You need to make the change in the "turtlebot3\_path\_planning.launch" file on the move\_base node to include the new move\_base\_path\_planning.launch file
 
 
+- Download the parameters .yaml file (global\_planner\_params\_burger.yaml) and place it in the turtlebot3\_navigation/param folder. This file allows you to make changes to the global planner parameters. Refer to the [ROS wiki](http://wiki.ros.org/global\_planner) for details on what each parameter does.
 
+- In the move\_base\_path\_planning.launch file, add a global planner as a parameter of the move\_base node in the launch file:
+    ```
+    <param name="base\_global\_planner" value="global\_planner/GlobalPlanner" />
+    <rosparam file="\$(find turtlebot3\_navigation)/param/global\_planner\_params\_burger.yaml" command="load"/>
+    ```
+    
+
+### Run the new navigation stack
+- Launch a gazebo instance of the burger in the turtleworld3\_world: ``$ roslaunch turtlebot3_gazebo turtlebot3_world.launch``
+
+- Launch the new turtlebot3\_path\_planning.launch. Before sending any Navigation goals, provide a 2DEstimate for the actual position of the robot in RViz. ``$ roslaunch turtlebot3_navigation turtlebot3_path_planning.launch``
+
+- The 2DEstimate point with the RViz GUI provides the robot’s initial position and orientation; a large mismatch between the robot’s estimates and its actual position may result in a fatal error for the launched file.
+
+- Customize the RViz visualization components
+    > Turn off the Global Map and Local Map, and add by topic the GlobalPlanner/potential topic as another map. Choose costmap to be the color scheme.
+
+    > Change the topic of Planner Plan to GlobalPlanner/plan.
+
+- Publish four sequential points for the robot to navigate towards($P_0 \rightarrow P_1\rightarrow P_2 \rightarrow P_3 \rightarrow P_0$). publish in the /move\_base/goal topic through a node (path\_planning\_goal.py from Canvas), or use rostopic pub from the command line.
