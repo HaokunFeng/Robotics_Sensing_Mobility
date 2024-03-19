@@ -43,7 +43,9 @@ In previous project, turtlebot3\_navigation.launch is launched before we used th
     <param name="base\_global\_planner" value="global\_planner/GlobalPlanner" />
     <rosparam file="\$(find turtlebot3\_navigation)/param/global\_planner\_params\_burger.yaml" command="load"/>
     ```
-    
+    ![Global Planner yaml file](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/4_Safe_Wandering_Using_Path_Planning_Algorithms/assets/globalPlanner.png)
+
+    <p align="center">Global Planner yaml file</p>
 
 ### Run the new navigation stack
 - Launch a gazebo instance of the burger in the turtleworld3\_world: ``$ roslaunch turtlebot3_gazebo turtlebot3_world.launch``
@@ -58,3 +60,14 @@ In previous project, turtlebot3\_navigation.launch is launched before we used th
     > Change the topic of Planner Plan to GlobalPlanner/plan.
 
 - Publish four sequential points for the robot to navigate towards($P_0 \rightarrow P_1\rightarrow P_2 \rightarrow P_3 \rightarrow P_0$). publish in the /move\_base/goal topic through a node (path\_planning\_goal.py from Canvas), or use rostopic pub from the command line.
+
+    ![Four Sequential Points](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/4_Safe_Wandering_Using_Path_Planning_Algorithms/assets/Fourpoints.PNG)
+    
+    <p align="center">Four Sequential Points</p>
+
+- Use two global planners: Djikstra and A* 
+    - When using dijkstra the planner works best if using gradient descent and not a grid; the opposite is true for A*. Also the value for neutral\_cost is relevant (lower for Dijkstra, medium for A*). The option of use\_quadratic may or may not help. The cost\_factor might influence how much the local planner will be used.
+    - Some parameters can be changed dynamically using the command: ``$ rosrun rqt_reconfigure rqt_reconfigure``
+
+- Use the pillar model, and add it as an obstacle in the turtlebot3\_world. Turn on the Local Map visualization in Rviz. Attempt to send a 2DNavigationGoal where the robot has to circumvent the new obstacle.
+    ![]
