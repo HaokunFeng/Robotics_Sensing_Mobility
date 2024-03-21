@@ -103,4 +103,21 @@ Following the instructions to install packages from from Fetch Robotics.
 ## Using Python to control Fetch robots
 
 - Use simple_disco.py for forward kinematics, and use wave.py for inverse kinematics
-    [![]()]()
+    [![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/5_Robotics_Arm_Kinematics/assets/Figure_16.png)](https://drive.google.com/file/d/1ZwtiBEKIzby9d41w-HFiOHbB0sHI5yez/view?usp=sharing)
+    <p align="center">Forward Kinematics</p>
+
+
+    [![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/5_Robotics_Arm_Kinematics/assets/Figure_17.png)](https://drive.google.com/file/d/1guc1U5W80TsFLtyZM9CvHUcbjO4hEo8N/view?usp=sharing)
+    <p align="center">Inverse Kinematics</p>
+
+- Modify the code that performs forward kinematics and move the arm to a pose with your desired input values. Compare the resulting angle values (rostopic echo /joint\_states) to your inputs.
+    - Desired input values: [0, 1.13, 1.47, 2.41, -1.87, -0.19, -1.31, 0.23]
+    - Resulting angle values: [-9.329264745528289e-08, 1.139991478665312, 1.4608868791752316, 2.4008205186795344, -1.8603803751813643, -0.18554489044681244, -1.3000192107105804, 0.2278446363946358]
+
+- Modify the code that performs inverse kinematics and move the arm to a pose with your desired input values. Then compare the resulting pose (rosrun tf tf\_echo /<link1> /<link2) to your inputs.
+    - Desired input values:[Pose(Point(0.042, 0.384, 1.826),
+                          Quaternion(0.173, -0.693, -0.242, 0.657)),
+                     Pose(Point(0.047, 0.545, 1.822),
+                          Quaternion(-0.274, -0.701, 0.173, 0.635))]
+    - Resulting pose:
+        ![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/5_Robotics_Arm_Kinematics/assets/Figure_15.png)
