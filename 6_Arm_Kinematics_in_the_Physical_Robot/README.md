@@ -21,4 +21,15 @@ Arm Kinematics in the Physical Robot
     > {Note}: Please be mindful as you use the UI’s joysticks and keep speeds low and movements small, particularly when movements lead towards the table. Please pay close attention to the robot mootion and stop the motion using emergency stop if necessary.
 
 - Use the web app to pick up the target object
-    
+    ![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/6_Arm_Kinematics_in_the_Physical_Robot/assets/Figure_1.jpg)
+
+
+### Spawning a Kinova robot arm using Kortex Driver
+Use the ros\_kortex repository to work with the Kinova arm. Execute the following launch file that will bring up the gen3\_lite controllers, MoveIt! Configurations and an RViZ window.
+
+```
+~$ roslaunch kortex_driver kortex_driver.launch arm:=gen3_lite ip_address:=<IP OF ROBOT>
+```
+
+> {Note:} Once the RViZ window has been opened, and the terminal should show two green messages ( “You can start planning now!” and “The Kortex driver has been initialized correctly!” ). At this point, you can add a MotionPlanning component in RviZ.
+
