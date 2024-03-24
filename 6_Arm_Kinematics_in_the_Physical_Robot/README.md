@@ -33,3 +33,15 @@ Use the ros\_kortex repository to work with the Kinova arm. Execute the followin
 
 > {Note:} Once the RViZ window has been opened, and the terminal should show two green messages ( “You can start planning now!” and “The Kortex driver has been initialized correctly!” ). At this point, you can add a MotionPlanning component in RviZ.
 
+![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/6_Arm_Kinematics_in_the_Physical_Robot/assets/kinovaRviz.png)
+
+
+### Using the Interactive Markers to change the robot’s pose based on the cartesian-space
+- Some useful tools:
+    - publishes the values of the joints: ``~$ rostopic echo -n 1 /my_gen3_lite/joint_states``
+    - outputs the pose of the robot’s end-effector with respect to the base of the robot: ``~$ rosrun tf tf_echo /base_link <END-EFFECTOR LINK>``
+    - generate a PDF with the TF tree for the robot: `` ~$ rosrun tf view_frames``
+- To change the state of the gripper, you need to change the Planning Group from arm to gripper, and you can select a new position.
+
+- Home
+    ![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/6_Arm_Kinematics_in_the_Physical_Robot/assets/Figure_2.png)
