@@ -57,4 +57,37 @@ In the Motion Planning component, find the Joints tab. You will be able to chang
 
 ### Pick up the cube
 
+[![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/6_Arm_Kinematics_in_the_Physical_Robot/assets/Figure_6.png)](https://drive.google.com/file/d/1yum7ISIHVoupH9UqZu44lZcm0edyvq94/view?usp=sharing)
 
+
+## Intro to Planning Scene Objects in MoveIt! (Only simulation)
+
+Go through the steps of adding an object to our planning scene, which in turn will serve as a constraint when MotionPlanning is creating safe motions for the robot to reach different positions. Using the RViZ tab called Scene Objects, select a “Box” with dimensions 1m for all three axes (x, y, z).
+
+Change the position values to the ones on the picture below (x= 0.55, y = ±0.45, z = -0.48) to set the scene object a little above the table level in the physical world. 
+Tick the box next to Box\_0 name (you may rename it), to attach the object to the base\_link.
+
+
+## Pick and Place task
+
+`` $ roslaunch kortex_gazebo spawn_kortex_robot.launch arm:=gen3_lite``
+
+In Gazebo, on the left panel’s “Insert” tab, find the “Wooden cube 7.5cm” object and add it to the world on a position on the ground within the robot arm’s workspace (space that can be reached by the arm).
+
+Add another planned scene object, to avoid hitting the ground with the robot’s end effector. You can follow the same instructions from RViZ.
+
+The pick and place task can be summarized in the following steps:
+
+    1. Reach position above the center of the object to be picked with gripper oriented
+    2. Adjust gripper to open or semi-open state.
+    3. Decrease the end-effector’s z-value position
+    4. Close gripper to grasp object.
+    5. Reach position above the desired location to place the object with gripper oriented.
+    6. Decrease the end-effector’s z-value position
+    7. Open gripper to release object.
+    8. Increase the end-effector’s z-value position to clear the object
+    9. Return to home position.
+
+- configure the program by running: ``$ rosrun rqt_reconfigure rqt_reconfigure``
+- Set allowed\_execution\_duration\_scaling to be 4 and uncheck the execution\_duration\_monitoring.
+    ![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/6_Arm_Kinematics_in_the_Physical_Robot/assets/config.png)
