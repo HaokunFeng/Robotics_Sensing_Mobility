@@ -45,3 +45,16 @@ Use the ros\_kortex repository to work with the Kinova arm. Execute the followin
 
 - Home
     ![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/6_Arm_Kinematics_in_the_Physical_Robot/assets/Figure_2.png)
+    ![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/6_Arm_Kinematics_in_the_Physical_Robot/assets/Figure_3.png)
+
+- Vertical
+    ![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/6_Arm_Kinematics_in_the_Physical_Robot/assets/Figure_4.png)
+    ![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/6_Arm_Kinematics_in_the_Physical_Robot/assets/Figure_5.png)
+
+
+### Using the Joints tab in MotionPlanning to change the robot’s pose on the configuration-space
+In the Motion Planning component, find the Joints tab. You will be able to change the values of the different joint angles. Explore the configuration space, determine which joints move in which direction when a positive or a negative angle is given to each joint.
+
+### Pick up the cube
+
+
