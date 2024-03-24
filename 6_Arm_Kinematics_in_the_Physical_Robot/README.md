@@ -91,3 +91,5 @@ The pick and place task can be summarized in the following steps:
 - configure the program by running: ``$ rosrun rqt_reconfigure rqt_reconfigure``
 - Set allowed\_execution\_duration\_scaling to be 4 and uncheck the execution\_duration\_monitoring.
     ![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/6_Arm_Kinematics_in_the_Physical_Robot/assets/config.png)
+
+    [![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/6_Arm_Kinematics_in_the_Physical_Robot/assets/Figure_7.png)](https://drive.google.com/file/d/1uLVzvj29bj41Ow5pKU2XDE0XBUfCFC4S/view?usp=sharing)
