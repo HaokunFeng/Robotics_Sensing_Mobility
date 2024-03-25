@@ -93,4 +93,4 @@ The process for sorting the green cube can involve the same steps as the pick-an
 
 - For sorting the cubes, we should consider finding waypoints that won't hit the walls, and generating trajectories that guarantee a successful movement between picking and placing.
 
-[![]()]
+[![](https://raw.githubusercontent.com/HaokunFeng/Robotics_Sensing_Mobility/main/7_Pick_and_Place_Tasks_and_Arm_Motion_Planning/assets/Figure_3.png)](https://drive.google.com/file/d/1fXucyTXoBMOyslCYr-TX6KnZwfQu4x0R/view?usp=sharing)
